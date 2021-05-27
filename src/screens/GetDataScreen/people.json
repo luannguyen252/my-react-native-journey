@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Luan Nguyen",
+    "gender": "Male",
+    "occupation": "Designer",
+    "country": "Vietnam"
+  },
+  {
+    "id": 2,
+    "name": "Kenya Hara",
+    "gender": "Male",
+    "occupation": "Designer",
+    "country": "Japan"
+  },
+  {
+    "id": 3,
+    "name": "Naoto Fukasawa",
+    "gender": "Male",
+    "occupation": "Designer",
+    "country": "Japan"
+  }
+]

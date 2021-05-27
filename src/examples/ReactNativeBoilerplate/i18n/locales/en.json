@@ -1,0 +1,20 @@
+{
+  "common": {
+    "brandName": "React Native Boilerplate",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "drawerButton": "Drawer Button"
+  },
+  "homeScreen": {
+    "appbarTitle": "Home Screen",
+    "message": "React Native Boilerplate",
+    "settingsButton": "Open Settings Screen",
+    "apiCallStatus": "Api call status"
+  },
+  "settingsScreen": {
+    "appbarTitle": "Settings",
+    "darkMode": "Dark Mode"
+  }
+}

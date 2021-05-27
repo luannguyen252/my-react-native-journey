@@ -1,0 +1,16 @@
+export const ColorsRandom = {
+  Black: '#000',
+  MainColor: '#7727FF',
+  SecondMainColor: '#64BFE3',
+  red: '#FF4F2D',
+  green: '#009600',
+  MarkerLabelColor: '#884896',
+  DarkPink: '#4F1F46',
+  DarkYellow: '#8A7412',
+  Indigo: '#5600A1',
+  PinkLight: '#A10056',
+  GreenLight: '#2F7F54',
+  LightGreen: '#32A305',
+  Oil: '#758921',
+  Tomato: '#E33939',
+};
