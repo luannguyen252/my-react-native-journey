@@ -36,6 +36,28 @@ expo init -t expo-template-blank-typescript
 expo r -c
 ```
 
+## Storybook
+
+```bash
+# Create application
+expo init --template tabs taskbox
+# Go to application
+cd taskbox
+# Add Storybook to application
+npx -p @storybook/cli sb init --type react_native
+# Allow the actions to be logged correctly in the Storybook UI
+yarn add -D @storybook/addon-ondevice-actions
+# Run Storybook
+npm storybook
+```
+
+Change `storybook/rn-addons.js` to the following:
+
+```javascript
+// storybook/rn-addons.js
+import "@storybook/addon-ondevice-actions/register";
+```
+
 **React Native Shadow**
 
 ```javascript
