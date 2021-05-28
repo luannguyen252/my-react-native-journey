@@ -2,13 +2,20 @@
 
 > React Native is a JavaScript framework for building cross-platform apps. This guide covers everything you need to know to start developing React Native apps.
 
+[React Native](https://reactnative.dev/)
+
 [React Native Express](https://www.reactnative.express/)
 
 ## Tutorials
 
+- [Catalin Miron - Youtube](https://www.youtube.com/channel/UCTcH04SRuyedaSuuQVeAcdg)
+- [Catalin Miron - Patreon](https://www.patreon.com/catalinmiron)
+- [William Candillon - Youtube](https://www.youtube.com/channel/UC806fwFWpiLQV5y-qifzHnA)
 - [React Native Tutorial - Tutorials Point](https://www.tutorialspoint.com/react_native/index.htm)
 
 ## Courses
+
+- [Build Delightful Gestures and Animations](https://start-react-native.dev/)
 
 ## Installation
 
@@ -74,7 +81,6 @@ export default function App() {
 ## Examples
 
 ```javascript
-// Example
 export default function App() {
   clickMe = () => {
     alert("Hello World!");
@@ -91,6 +97,8 @@ export default function App() {
 }
 ```
 
+**Function**
+
 ```javascript
 clickMe = () => {
   var message = ``;
@@ -103,4 +111,53 @@ clickMe = () => {
 
   Alert.alert(message);
 };
+```
+
+```javascript
+const getFullName = (firstName, secondName, thirdName) => {
+  return firstName + " " + secondName + " " + thirdName;
+};
+
+const Cat = () => {
+  return <Text>Hello, I am {getFullName("Rum", "Tum", "Tugger")}!</Text>;
+};
+
+export default Cat;
+```
+
+**State**
+
+```javascript
+import React, { useState } from "react";
+import { Button, Text, View } from "react-native";
+
+const Cat = (props) => {
+  const [isHungry, setIsHungry] = useState(true);
+
+  return (
+    <View>
+      <Text>
+        I am {props.name}, and I am {isHungry ? "hungry" : "full"}!
+      </Text>
+      <Button
+        onPress={() => {
+          setIsHungry(false);
+        }}
+        disabled={!isHungry}
+        title={isHungry ? "Pour me some milk, please!" : "Thank you!"}
+      />
+    </View>
+  );
+};
+
+const Cafe = () => {
+  return (
+    <>
+      <Cat name="Munkustrap" />
+      <Cat name="Spot" />
+    </>
+  );
+};
+
+export default Cafe;
 ```
