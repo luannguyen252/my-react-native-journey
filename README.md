@@ -1,5 +1,15 @@
 # React Native
 
+> React Native is a JavaScript framework for building cross-platform apps. This guide covers everything you need to know to start developing React Native apps.
+
+[React Native Express](https://www.reactnative.express/)
+
+## Tutorials
+
+- [React Native Tutorial - Tutorials Point](https://www.tutorialspoint.com/react_native/index.htm)
+
+## Courses
+
 ## Installation
 
 ```bash
@@ -59,4 +69,38 @@ export default function App() {
     </View>
   );
 }
+```
+
+## Examples
+
+```javascript
+// Example
+export default function App() {
+  clickMe = () => {
+    alert("Hello World!");
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>React Native</Text>
+      <TouchableOpacity onPress={this.clickMe.bind(this)}>
+        <Text>Click Me</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+```
+
+```javascript
+clickMe = () => {
+  var message = ``;
+
+  if (Platform.OS == "ios") {
+    message = "Welcome to iOS!";
+  } else if (Platform.OS == "android") {
+    message = "Welcome to Android!";
+  }
+
+  Alert.alert(message);
+};
 ```
