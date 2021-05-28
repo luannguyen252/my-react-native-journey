@@ -45,8 +45,6 @@ expo init --template tabs taskbox
 cd taskbox
 # Add Storybook to application
 npx -p @storybook/cli sb init --type react_native
-# Allow the actions to be logged correctly in the Storybook UI
-yarn add -D @storybook/addon-ondevice-actions
 # Run Storybook
 npm storybook
 ```
