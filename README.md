@@ -1,5 +1,7 @@
 # React Native
 
+## Installation
+
 ```bash
 # Install CLI
 npm install --global expo-cli
