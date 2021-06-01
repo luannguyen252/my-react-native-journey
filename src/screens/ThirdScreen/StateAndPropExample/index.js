@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import globalStyles from "../../../assets/styles/globalStyles";
 import StateExample from "./StateExample";
+import StateArrayExample from "./StateArrayExample";
 
 export default class StateAndPropExample extends PureComponent {
   render() {
@@ -19,8 +20,8 @@ export default class StateAndPropExample extends PureComponent {
               paddingBottom: 200,
             }}
           >
-            <Text>State And Prop Example</Text>
             <StateExample />
+            <StateArrayExample />
           </ScrollView>
         </SafeAreaView>
       </View>
