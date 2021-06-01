@@ -48,15 +48,18 @@ export default class StateArrayExample extends PureComponent {
     };
   }
 
+  // Clear State
   clearPerson = () => {
     this.setState({ persons: [] });
   };
 
+  // Reset State
   resetPerson = () => {
     this.setState({ persons });
   };
 
-  changePerson = (name, age, job) => {
+  // Update State
+  updatePerson = (name, age, job) => {
     this.setState((state) => {
       const persons = state.personsUpdate.filter(
         (item) => (item.name !== name, item.age !== age, item.job !== job)
@@ -74,7 +77,7 @@ export default class StateArrayExample extends PureComponent {
           </Text>
         ))}
 
-        <Button title="Change Person" onPress={() => this.changePerson()} />
+        <Button title="Update Person" onPress={() => this.updatePerson()} />
         <Button title="Clear Person" onPress={() => this.clearPerson()} />
         <Button title="Reset Person" onPress={() => this.resetPerson()} />
       </View>
