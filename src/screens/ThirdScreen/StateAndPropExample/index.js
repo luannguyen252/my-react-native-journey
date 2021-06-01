@@ -4,6 +4,11 @@ import { StatusBar } from "expo-status-bar";
 import globalStyles from "../../../assets/styles/globalStyles";
 import StateExample from "./StateExample";
 import StateArrayExample from "./StateArrayExample";
+import PropsExample from "./PropExample";
+import PropsExample2 from "./PropsExample2";
+import PropsExample3 from "./PropsExample3";
+import PropsExample4 from "./PropsExample4";
+import PropsExample5 from "./PropsExample5";
 
 export default class StateAndPropExample extends PureComponent {
   render() {
@@ -20,8 +25,20 @@ export default class StateAndPropExample extends PureComponent {
               paddingBottom: 200,
             }}
           >
+            <Text style={globalStyles.title}>State Example</Text>
             <StateExample />
             <StateArrayExample />
+
+            <Text style={globalStyles.title}>Props Example</Text>
+            <PropsExample
+              name="Luan Nguyen"
+              age="30"
+              job="Digital Product Designer"
+            />
+            <PropsExample2 />
+            <PropsExample3 />
+            <PropsExample4 />
+            <PropsExample5 />
           </ScrollView>
         </SafeAreaView>
       </View>
