@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { View, Text, SafeAreaView, Animated } from "react-native";
+import { View, Text, SafeAreaView, Animated, Button } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import globalStyles from "../../assets/styles/globalStyles";
 import styles from "./styles";
@@ -15,14 +15,10 @@ export default class ThirdScreen extends PureComponent {
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{ paddingBottom: 96 }}
           >
-            <Text
-              style={[
-                globalStyles.bodyText,
-                { paddingLeft: 16, paddingRight: 16 },
-              ]}
-            >
-              Examples in Third Screen will appear here.
-            </Text>
+            <Button
+              title="API Example"
+              onPress={() => this.props.navigation.navigate("API Example")}
+            />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>

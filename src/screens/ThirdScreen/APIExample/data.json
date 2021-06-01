@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Luan Nguyen",
+    "role": "Product Designer",
+    "introduction": "Working at the intersection of design and technologies. Also, passionate about Design Systems."
+  },
+  {
+    "id": 2,
+    "name": "Tim Cook",
+    "role": "CEO",
+    "introduction": "Tim Cook is the CEO of Apple and serves on its board of directors."
+  },
+  {
+    "id": 3,
+    "name": "Craig Federighi",
+    "role": "Software Engineering",
+    "introduction": "Craig Federighi is Apple’s senior vice president of Software Engineering, reporting to CEO Tim Cook."
+  }
+]

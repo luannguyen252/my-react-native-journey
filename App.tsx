@@ -43,6 +43,7 @@ import MapViewExample from "./src/screens/SecondScreen/MapViewExample";
 import LocationExample from "./src/screens/SecondScreen/LocationExample";
 import KeyboardAPIExample from "./src/screens/SecondScreen/KeyboardAPIExample";
 import UseKeyboardHookExample from "./src/screens/SecondScreen/UseKeyboardHookExample";
+import APIExample from "./src/screens/ThirdScreen/APIExample/";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -290,6 +291,7 @@ export default function App() {
           name="UseKeyboard Hook Example"
           component={UseKeyboardHookExample}
         />
+        <Stack.Screen name="API Example" component={APIExample} />
       </Stack.Navigator>
     </NavigationContainer>
   );
