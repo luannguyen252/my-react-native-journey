@@ -25,6 +25,12 @@ export default class ThirdScreen extends PureComponent {
                 this.props.navigation.navigate("State and Prop Example")
               }
             />
+            <Button
+              title="React Lifecycle Example"
+              onPress={() =>
+                this.props.navigation.navigate("React Lifecycle Example")
+              }
+            />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>
