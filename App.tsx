@@ -44,6 +44,7 @@ import LocationExample from "./src/screens/SecondScreen/LocationExample";
 import KeyboardAPIExample from "./src/screens/SecondScreen/KeyboardAPIExample";
 import UseKeyboardHookExample from "./src/screens/SecondScreen/UseKeyboardHookExample";
 import APIExample from "./src/screens/ThirdScreen/APIExample/";
+import StateAndPropExample from "./src/screens/ThirdScreen/StateAndPropExample/";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -292,6 +293,10 @@ export default function App() {
           component={UseKeyboardHookExample}
         />
         <Stack.Screen name="API Example" component={APIExample} />
+        <Stack.Screen
+          name="State and Prop Example"
+          component={StateAndPropExample}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

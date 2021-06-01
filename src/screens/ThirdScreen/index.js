@@ -19,6 +19,12 @@ export default class ThirdScreen extends PureComponent {
               title="API Example"
               onPress={() => this.props.navigation.navigate("API Example")}
             />
+            <Button
+              title="State and Prop Example"
+              onPress={() =>
+                this.props.navigation.navigate("State and Prop Example")
+              }
+            />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>

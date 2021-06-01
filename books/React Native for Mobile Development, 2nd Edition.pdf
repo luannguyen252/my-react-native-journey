@@ -1,0 +1,10 @@
+<br />
+<b>Warning</b>:  filesize(): stat failed for https://allitbooks.net/remo-pdf/React%20Native%20for%20Mobile%20Development,%202nd%20Edition.pdf in <b>/home/bmmjkvtf/public_html/getfile.php</b> on line <b>28</b><br />
+<br />
+<b>Warning</b>:  md5_file(https://allitbooks.net/remo-pdf/React%20Native%20for%20Mobile%20Development,%202nd%20Edition.pdf): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in <b>/home/bmmjkvtf/public_html/getfile.php</b> on line <b>29</b><br />
+<br />
+<b>Warning</b>:  filemtime(): stat failed for https://allitbooks.net/remo-pdf/React%20Native%20for%20Mobile%20Development,%202nd%20Edition.pdf in <b>/home/bmmjkvtf/public_html/getfile.php</b> on line <b>35</b><br />
+<br />
+<b>Warning</b>:  readfile(https://allitbooks.net/remo-pdf/React%20Native%20for%20Mobile%20Development,%202nd%20Edition.pdf): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in <b>/home/bmmjkvtf/public_html/getfile.php</b> on line <b>37</b><br />
