@@ -17,6 +17,11 @@
 
 - [Build Delightful Gestures and Animations](https://start-react-native.dev/)
 
+## React Native Library
+
+- [touchable-scale](https://github.com/JonnyBurger/touchable-scale))
+- [react-navigation](https://github.com/react-navigation/react-navigation)
+
 ## Examples
 
 - [React Native Examples](https://reactnativeexample.com/)
