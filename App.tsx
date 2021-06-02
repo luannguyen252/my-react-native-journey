@@ -46,6 +46,7 @@ import UseKeyboardHookExample from "./src/screens/SecondScreen/UseKeyboardHookEx
 import APIExample from "./src/screens/ThirdScreen/APIExample/";
 import StateAndPropExample from "./src/screens/ThirdScreen/StateAndPropExample/";
 import ReactLifecycleExample from "./src/screens/ThirdScreen/ReactLifecycleExample/";
+import ReactEventsExample from "./src/screens/ThirdScreen/ReactEventsExample/";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -301,6 +302,10 @@ export default function App() {
         <Stack.Screen
           name="React Lifecycle Example"
           component={ReactLifecycleExample}
+        />
+        <Stack.Screen
+          name="React Events Example"
+          component={ReactEventsExample}
         />
       </Stack.Navigator>
     </NavigationContainer>
