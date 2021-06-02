@@ -1,4 +1,5 @@
 // Read more: https://www.w3schools.com/react/react_lifecycle.asp
+// Read more: https://codingambitions.com/reactnative/react-native-component-lifecycle-explained/
 import React, { PureComponent } from "react";
 import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
