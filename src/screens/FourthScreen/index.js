@@ -27,6 +27,12 @@ export default class FourthScreen extends PureComponent {
               title="Native Base Example"
               onPress={() => this.props.navigation.navigate("Native Base")}
             />
+            <Button
+              title="Scrollable Tab View Example"
+              onPress={() =>
+                this.props.navigation.navigate("Scrollable Tab View Example")
+              }
+            />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>

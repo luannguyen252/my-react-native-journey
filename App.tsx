@@ -47,6 +47,7 @@ import APIExample from "./src/screens/ThirdScreen/APIExample/";
 import StateAndPropExample from "./src/screens/ThirdScreen/StateAndPropExample/";
 import ReactLifecycleExample from "./src/screens/ThirdScreen/ReactLifecycleExample/";
 import ReactEventsExample from "./src/screens/ThirdScreen/ReactEventsExample/";
+import ScrollableTabViewExample from "./src/screens/FourthScreen/ScrollableTabViewExample/";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -306,6 +307,10 @@ export default function App() {
         <Stack.Screen
           name="React Events Example"
           component={ReactEventsExample}
+        />
+        <Stack.Screen
+          name="Scrollable Tab View Example"
+          component={ScrollableTabViewExample}
         />
       </Stack.Navigator>
     </NavigationContainer>
