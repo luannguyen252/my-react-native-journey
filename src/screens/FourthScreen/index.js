@@ -33,6 +33,30 @@ export default class FourthScreen extends PureComponent {
                 this.props.navigation.navigate("Scrollable Tab View Example")
               }
             />
+            <Button
+              title="Instant Search Example"
+              onPress={() =>
+                this.props.navigation.navigate("Instant Search Example")
+              }
+            />
+            <Button
+              title="Filter Method Example"
+              onPress={() =>
+                this.props.navigation.navigate("Filter Method Example")
+              }
+            />
+            <Button
+              title="Search Filter Example"
+              onPress={() =>
+                this.props.navigation.navigate("Search Filter Example")
+              }
+            />
+            <Button
+              title="React Native Soundboard"
+              onPress={() =>
+                this.props.navigation.navigate("React Native Soundboard")
+              }
+            />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>

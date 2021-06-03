@@ -48,6 +48,10 @@ import StateAndPropExample from "./src/screens/ThirdScreen/StateAndPropExample/"
 import ReactLifecycleExample from "./src/screens/ThirdScreen/ReactLifecycleExample/";
 import ReactEventsExample from "./src/screens/ThirdScreen/ReactEventsExample/";
 import ScrollableTabViewExample from "./src/screens/FourthScreen/ScrollableTabViewExample/";
+import InstantSearchExample from "./src/screens/FourthScreen/InstantSearchExample/";
+import FilterMethodExample from "./src/screens/FourthScreen/FilterMethodExample/";
+import SearchFilterExample from "./src/screens/FourthScreen/SearchFilterExample/";
+import ReactNativeSoundboard from "./src/screens/FourthScreen/ReactNativeSoundboard/";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -311,6 +315,22 @@ export default function App() {
         <Stack.Screen
           name="Scrollable Tab View Example"
           component={ScrollableTabViewExample}
+        />
+        <Stack.Screen
+          name="Instant Search Example"
+          component={InstantSearchExample}
+        />
+        <Stack.Screen
+          name="Filter Method Example"
+          component={FilterMethodExample}
+        />
+        <Stack.Screen
+          name="Search Filter Example"
+          component={SearchFilterExample}
+        />
+        <Stack.Screen
+          name="React Native Soundboard"
+          component={ReactNativeSoundboard}
         />
       </Stack.Navigator>
     </NavigationContainer>

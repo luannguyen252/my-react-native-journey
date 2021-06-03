@@ -4,22 +4,23 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
 } from "react-native";
 import { Audio } from "expo-av";
 
-const SoundButton = props => {
+const SoundButton = (props) => {
   const [isPlaying, setPlaying] = useState(false);
 
-  const playSound = async pathToSound => {
+  const playSound = async (pathToSound) => {
+    // Play sound
     setPlaying(true);
-    //Play sound
 
     let soundObject = new Audio.Sound();
+
     try {
       await soundObject.loadAsync(props.soundBite);
       await soundObject.playAsync();
-      soundObject.setOnPlaybackStatusUpdate(async status => {
+      soundObject.setOnPlaybackStatusUpdate(async (status) => {
         if (status.didJustFinish) {
           await soundObject.unloadAsync();
           setPlaying(false);
@@ -58,14 +59,13 @@ const styles = StyleSheet.create({
     elevation: 10,
     justifyContent: "flex-end",
     borderColor: "black",
-    borderWidth: 2
+    borderWidth: 2,
   },
   textStyle: {
     textAlign: "center",
     marginBottom: 5,
     color: "black",
-    fontFamily: "monospace"
-  }
+  },
 });
 
 export default SoundButton;

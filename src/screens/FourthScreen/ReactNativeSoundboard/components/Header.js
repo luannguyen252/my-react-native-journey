@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
-//Dependency Components
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const WIDTH = Dimensions.get("window").width;
@@ -24,19 +23,18 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     elevation: 10,
     marginBottom: 20,
-    flexDirection: "row"
+    flexDirection: "row",
   },
   headerText: {
     color: "black",
     textAlign: "center",
     alignSelf: "center",
     fontSize: 30,
-    fontFamily: "monospace",
-    textDecorationLine: "underline"
+    textDecorationLine: "underline",
   },
   icon: {
-    alignSelf: "center"
-  }
+    alignSelf: "center",
+  },
 });
 
 export default Header;
