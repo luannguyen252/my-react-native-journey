@@ -76,6 +76,7 @@
     "react-native-scrollable-tab-view": "^1.0.0",
     "react-native-search-filter": "^0.1.5",
     "react-native-shared-element": "0.7.0",
+    "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^12.1.1",
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12",
