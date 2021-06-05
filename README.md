@@ -267,3 +267,7 @@ function GoToButton({ screenName }) {
   );
 }
 ```
+
+- [NavigationActions Reference](https://reactnavigation.org/docs/1.x/navigation-actions)
+- [StackNavigator Reference](https://reactnavigation.org/docs/1.x/stack-navigator#screen-navigation-options)
+- [TabNavigator Reference](https://reactnavigation.org/docs/1.x/tab-navigator)

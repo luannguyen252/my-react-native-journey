@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { Camera } from "expo-camera"; // expo install unimodules-permissions-interface
+import { Camera } from "expo-camera"; // expo install expo-camera unimodules-permissions-interface
 import { StatusBar } from "expo-status-bar";
 
 export default function CameraScreen() {
