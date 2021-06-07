@@ -50,6 +50,8 @@ expo login
 expo init -t expo-template-blank-typescript
 # Reset cache
 expo r -c
+# Remove node_modules
+rm -rf node_modules
 ```
 
 ## Storybook
