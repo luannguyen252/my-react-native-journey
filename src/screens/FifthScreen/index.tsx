@@ -3,6 +3,8 @@ import { View, Text, SafeAreaView, Button, Animated } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import globalStyles from "../../assets/styles/globalStyles";
 import styles from "./styles";
+import ReactNativeTouchableScaleFeedbackExamples from "./ReactNativeTouchableScaleFeedbackExamples";
+import ReactNativeFlatButtonExamples from "./ReactNativeFlatButtonExamples";
 
 export default class FifthScreen extends PureComponent {
   render() {
@@ -24,6 +26,10 @@ export default class FifthScreen extends PureComponent {
               Examples in Fifth Screen will appear here.
             </Text>
             <Button title="Click Me" onPress={() => alert("Button Clicked!")} />
+
+            <ReactNativeTouchableScaleFeedbackExamples />
+
+            <ReactNativeFlatButtonExamples />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>
