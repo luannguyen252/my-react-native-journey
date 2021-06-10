@@ -1,0 +1,40 @@
+{
+  "name": "react-native-keyboard-adaptable-view",
+  "version": "1.0.7",
+  "description": "A component that avoids overlapping fields by keyboard using autoscroll.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabio-alss-freitas/react-native-keyboard-adaptable-view.git"
+  },
+  "keywords": [
+    "autoscroll",
+    "keyboard",
+    "keyboardavoidingview",
+    "adaptable-view",
+    "textinput",
+    "react",
+    "react-native",
+    "scrollview",
+    "keyboard",
+    "ios",
+    "android",
+    "react-component",
+    "avoid"
+  ],
+  "author": "Fabio Freitas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabio-alss-freitas/react-native-keyboard-adaptable-view/issues"
+  },
+  "homepage": "https://github.com/fabio-alss-freitas/react-native-keyboard-adaptable-view#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.57.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
+}
