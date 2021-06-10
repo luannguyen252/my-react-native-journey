@@ -52,6 +52,10 @@ import InstantSearchExample from "./src/screens/FourthScreen/InstantSearchExampl
 import FilterMethodExample from "./src/screens/FourthScreen/FilterMethodExample/";
 import SearchFilterExample from "./src/screens/FourthScreen/SearchFilterExample/";
 import ReactNativeSoundboard from "./src/screens/FourthScreen/ReactNativeSoundboard/";
+import ReactNativeLocationTrackingExamples from "././src/screens/SecondScreen/ReactNativeLocationTrackingExamples";
+import ReactNativeModalExamples from "././src/screens/SecondScreen/ReactNativeModalExamples";
+import ReactNativeCircularProgressExample from "././src/screens/SecondScreen/ReactNativeCircularProgressExample";
+import ReactNativeSimpleRadioButton from "././src/screens/SecondScreen/ReactNativeSimpleRadioButton";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -331,6 +335,22 @@ export default function App() {
         <Stack.Screen
           name="React Native Soundboard"
           component={ReactNativeSoundboard}
+        />
+        <Stack.Screen
+          name="React Native Location Tracking Examples"
+          component={ReactNativeLocationTrackingExamples}
+        />
+        <Stack.Screen
+          name="React Native Modal Examples"
+          component={ReactNativeModalExamples}
+        />
+        <Stack.Screen
+          name="React Native Circular Progress Example"
+          component={ReactNativeCircularProgressExample}
+        />
+        <Stack.Screen
+          name="React Native Simple Radio Button"
+          component={ReactNativeSimpleRadioButton}
         />
       </Stack.Navigator>
     </NavigationContainer>

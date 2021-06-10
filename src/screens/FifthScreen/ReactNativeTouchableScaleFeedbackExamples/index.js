@@ -65,17 +65,19 @@ export default function ReactNativeTouchableScaleFeedbackExamples() {
 const styles = StyleSheet.create({
   signupButton: {
     height: 52,
-    borderRadius: 6,
+    borderRadius: 8,
     overflow: "hidden",
     alignItems: "center",
     marginHorizontal: 10,
     justifyContent: "center",
-    backgroundColor: "#FF403B",
+    backgroundColor: "#EE0033",
     marginBottom: 16,
   },
   signupText: {
     color: "white",
     fontSize: 20,
+    lineHeight: 24,
+    fontWeight: "600",
   },
   card: {
     width: "80%",
