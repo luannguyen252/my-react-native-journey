@@ -5,6 +5,8 @@ import globalStyles from "../../assets/styles/globalStyles";
 import styles from "./styles";
 import ReactNativeTouchableScaleFeedbackExamples from "./ReactNativeTouchableScaleFeedbackExamples";
 import ReactNativeFlatButtonExamples from "./ReactNativeFlatButtonExamples";
+import ReactNativeTextTickerExamples1 from "./ReactNativeTextTickerExamples/ReactNativeTextTickerExamples1";
+import ReactNativeTextTickerExamples2 from "./ReactNativeTextTickerExamples/ReactNativeTextTickerExamples2";
 
 export default class FifthScreen extends PureComponent {
   render() {
@@ -27,9 +29,13 @@ export default class FifthScreen extends PureComponent {
             </Text>
             <Button title="Click Me" onPress={() => alert("Button Clicked!")} />
 
+            {/* Button Touchable Scale Feedback  */}
             <ReactNativeTouchableScaleFeedbackExamples />
-
             <ReactNativeFlatButtonExamples />
+
+            {/* Text Ticker / Marquee Label */}
+            <ReactNativeTextTickerExamples1 />
+            <ReactNativeTextTickerExamples2 />
           </Animated.ScrollView>
         </SafeAreaView>
       </View>
