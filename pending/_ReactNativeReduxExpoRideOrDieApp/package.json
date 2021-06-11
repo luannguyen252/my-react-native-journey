@@ -1,0 +1,59 @@
+{
+  "name": "expo-react-native-redux-starter",
+  "description": "A React-Native starter application including Expo, Redux and more!",
+  "main": "src/index.js",
+  "scripts": {
+    "eject": "./node_modules/.bin/expo eject",
+    "eslint": "./node_modules/.bin/eslint src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" No JavaScript ESLint errors to fix",
+    "eslint:fix": "./node_modules/.bin/eslint --fix src/ && echo \"\\x1b[102m\\x1b[1m ESLINT \\x1b[0m\" ESLint JavaScript errors fixed",
+    "start": "./node_modules/.bin/expo start",
+    "start:android": "npm run start -- --android",
+    "start:ios": "npm run start -- --ios",
+    "start:web": "npm run start -- --web",
+    "test": "./node_modules/.bin/jest --config ./jest.config.json",
+    "test:coverage": "npm run test -- --coverage"
+  },
+  "author": {
+    "name": "Joey Schroeder",
+    "email": "schrjos@gmail.com"
+  },
+  "homepage": "https://github.com/joeyschroeder/expo-react-native-redux-starter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeyschroeder/expo-react-native-redux-starter.git"
+  },
+  "dependencies": {
+    "expo": "~36.0.0",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-web": "~0.11.7",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-expo": "~8.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-native": "^3.8.1",
+    "expo-cli": "^3.11.9",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "jest-dot-reporter": "^1.0.14",
+    "jest-expo": "^36.0.1",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0"
+  },
+  "private": true
+}

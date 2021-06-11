@@ -1,0 +1,44 @@
+{
+  "name": "react-native-animated-numbers",
+  "version": "0.2.1",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "description": "Module that shows number changes through simple animation",
+  "scripts": {
+    "lint": "yarn eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyman333/react-native-animated-numbers"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react-component",
+    "ios",
+    "android",
+    "react",
+    "animation",
+    "text",
+    "number"
+  ],
+  "author": "youngsoohan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyman333/react-native-animated-numbers/issues"
+  },
+  "homepage": "https://github.com/heyman333/react-native-animated-numbers/blob/master/README.md",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.59"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-plugin-react": "^7.20.3"
+  },
+  "dependencies": {
+    "react-native-reanimated": "^1.10.2",
+    "react-native-gesture-handler": "^1.7.0"
+  }
+}

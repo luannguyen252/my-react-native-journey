@@ -1,0 +1,37 @@
+{
+  "name": "rn-animated-sprite-matrix",
+  "version": "0.2.1",
+  "description": "matrix component for animated sprites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micahrye/rn-animated-sprite-matrix.git"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "mobile",
+    "android",
+    "ios",
+    "games",
+    "animation",
+    "tween"
+  ],
+  "author": "rye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micahrye/rn-animated-sprite-matrix/issues"
+  },
+  "homepage": "https://github.com/micahrye/rn-animated-sprite-matrix#readme",
+  "dependencies": {
+    "react-native-animated-sprite": "^0.10.3",
+    "prop-types": "^15.5.8",
+    "random-string": "^0.2.0",
+    "lodash": "^4.17.4",
+    "react-mixin": "^3.0.5",
+    "react-timer-mixin": "^0.13.3"
+  }
+}
