@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import AnimateableText from 'react-native-animateable-text';
-import { PanGestureHandler } from 'react-native-gesture-handler';
-import Animated, { concat, multiply, round } from 'react-native-reanimated';
-import { ReText, usePanGestureHandler } from 'react-native-redash';
+import * as React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import AnimateableText from "react-native-animateable-text";
+import { PanGestureHandler } from "react-native-gesture-handler";
+import Animated, { concat, multiply, round } from "react-native-reanimated";
+import { ReText, usePanGestureHandler } from "react-native-redash";
 
 const style = {
   fontSize: 30,
-  fontWeight: 'bold' as const,
-  color: 'black' as const,
+  fontWeight: "bold" as const,
+  color: "black" as const,
   paddingTop: 0,
   paddingBottom: 0,
 };
@@ -19,16 +19,16 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
-  row: { flexDirection: 'row', paddingLeft: 20, paddingRight: 20 },
+  row: { flexDirection: "row", paddingLeft: 20, paddingRight: 20 },
   spacer: {
     height: 20,
   },
   outerBar: {
-    width: '90%',
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    width: "90%",
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
     height: 40,
   },
 });
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 export default function App() {
   const panGestureHandler = usePanGestureHandler();
   const str = React.useMemo(
-    () => concat(round(multiply(panGestureHandler.translation.x, 1000)), '×'),
+    () => concat(round(multiply(panGestureHandler.translation.x, 1000)), "×"),
     [panGestureHandler.translation.x]
   );
 
@@ -45,7 +45,7 @@ export default function App() {
       left: panGestureHandler.position.x,
       height: 40,
       width: 10,
-      backgroundColor: 'black',
+      backgroundColor: "black",
     };
   }, [panGestureHandler.position.x]);
 
@@ -58,7 +58,7 @@ export default function App() {
       </View>
       <View style={styles.row}>
         <Text style={style} selectable>
-          AnimateableText:{' '}
+          AnimateableText:{" "}
         </Text>
         <View style={styles.flex1} />
         <AnimateableText selectable text={str} style={style} />

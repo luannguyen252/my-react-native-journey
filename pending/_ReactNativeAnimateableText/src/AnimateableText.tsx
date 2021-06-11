@@ -1,28 +1,18 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @flow
- * @format
- */
+"use strict";
+const DeprecatedTextPropTypes = require("react-native/Libraries/DeprecatedPropTypes/DeprecatedTextPropTypes");
+const React = require("react");
+const ReactNativeViewAttributes = require("react-native/Libraries/Components/View/ReactNativeViewAttributes");
+const Touchable = require("react-native/Libraries/Components/Touchable/Touchable");
 
-'use strict';
-const DeprecatedTextPropTypes = require('react-native/Libraries/DeprecatedPropTypes/DeprecatedTextPropTypes');
-const React = require('react');
-const ReactNativeViewAttributes = require('react-native/Libraries/Components/View/ReactNativeViewAttributes');
-const Touchable = require('react-native/Libraries/Components/Touchable/Touchable');
-
-const createReactNativeComponentClass = require('react-native/Libraries/Renderer/shims/createReactNativeComponentClass');
-const nullthrows = require('nullthrows');
-const processColor = require('react-native/Libraries/StyleSheet/processColor');
+const createReactNativeComponentClass = require("react-native/Libraries/Renderer/shims/createReactNativeComponentClass");
+const nullthrows = require("nullthrows");
+const processColor = require("react-native/Libraries/StyleSheet/processColor");
 import type {
   Text as IText,
   GestureResponderEvent,
   HostComponent,
-} from 'react-native';
-import type { AnimateableTextProps } from './TextProps';
+} from "react-native";
+import type { AnimateableTextProps } from "./TextProps";
 
 type PressRetentionOffset = {
   top: number;
@@ -74,13 +64,13 @@ const viewConfig = {
   },
   directEventTypes: {
     topTextLayout: {
-      registrationName: 'onTextLayout',
+      registrationName: "onTextLayout",
     },
     topInlineViewLayout: {
-      registrationName: 'onInlineViewLayout',
+      registrationName: "onInlineViewLayout",
     },
   },
-  uiViewClassName: 'JBAnimatedText',
+  uiViewClassName: "JBAnimatedText",
 };
 
 /**
@@ -92,7 +82,7 @@ class TouchableText extends React.Component<AnimateableTextProps, State> {
   static defaultProps = {
     accessible: true,
     allowFontScaling: true,
-    ellipsizeMode: 'tail',
+    ellipsizeMode: "tail",
   };
 
   touchableGetPressRectOffset?: () => PressRetentionOffset;
@@ -145,7 +135,7 @@ class TouchableText extends React.Component<AnimateableTextProps, State> {
       if (Touchable.TOUCH_TARGET_DEBUG && props.onPress != null) {
         props = {
           ...props,
-          style: [props.style, { color: 'magenta' }],
+          style: [props.style, { color: "magenta" }],
         };
       }
     }
@@ -211,7 +201,7 @@ class TouchableText extends React.Component<AnimateableTextProps, State> {
       return;
     }
     for (const key in Touchable.Mixin) {
-      if (typeof Touchable.Mixin[key] === 'function') {
+      if (typeof Touchable.Mixin[key] === "function") {
         this[key] = Touchable.Mixin[key].bind(this);
       }
     }
@@ -258,7 +248,7 @@ const Text = (props: AnimateableTextProps, forwardedRef?: React.Ref<IText>) => {
   return <TouchableText {...props} forwardedRef={forwardedRef} />;
 };
 const TextToExport = React.forwardRef(Text);
-TextToExport.displayName = 'Animateable';
+TextToExport.displayName = "Animateable";
 
 // TODO: Deprecate this.
 /* $FlowFixMe(>=0.89.0 site=react_native_fb) This comment suppresses an error
