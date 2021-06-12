@@ -1,5 +1,5 @@
 const colors = {
-  // Blur Gray
+  // Blue Gray
   blueGray50: "#F8FAFC",
   blueGray100: "#F1F5F9",
   blueGray200: "#E2E8F0",
