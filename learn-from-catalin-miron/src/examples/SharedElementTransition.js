@@ -1,7 +1,14 @@
 import * as Animatable from "react-native-animatable";
 import * as React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 
+const { width, height } = Dimensions.get("screen");
 const SPACING = 16;
 
 const colors = [
@@ -31,6 +38,29 @@ const persons = [
   },
   {
     name: "Craig Federighi",
+  },
+];
+
+const fruits = [
+  {
+    name: "Apple",
+    color: "#EF4444",
+  },
+  {
+    name: "Orange",
+    color: "#F97316",
+  },
+  {
+    name: "Banana",
+    color: "#EAB308",
+  },
+  {
+    name: "Pineapple",
+    color: "#F59E0B",
+  },
+  {
+    name: "Strawberry",
+    color: "#E11D48",
   },
 ];
 
@@ -64,6 +94,21 @@ export default function SharedElementTransition() {
           {person.name}
         </Animatable.Text>
       ))}
+
+      <View style={{}}>
+        {fruits.map((fruit, index) => (
+          <Animatable.View
+            animation="fadeInUp"
+            delay={index * 1000}
+            key={index}
+            style={[styles.fruit, { backgroundColor: fruit.color }]}
+          >
+            <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: "700" }}>
+              {fruit.name}
+            </Text>
+          </Animatable.View>
+        ))}
+      </View>
     </View>
   );
 }
@@ -75,5 +120,13 @@ const styles = StyleSheet.create({
     marginBottom: SPACING,
     fontSize: 16,
     fontWeight: "700",
+  },
+  fruit: {
+    width: 300,
+    height: 100,
+    borderRadius: 8,
+    marginBottom: SPACING,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });

@@ -18,6 +18,8 @@ import CarouselFlatListAnimation from "./src/examples/CarouselFlatListAnimation"
 import SharedElementTransitionReactNavigation from "./src/examples/SharedElementTransitionReactNavigation";
 import SharedElementTransitionReactNavigationDetails from "./src/examples/SharedElementTransitionReactNavigationDetails";
 import SharedElementTransition from "./src/examples/SharedElementTransition";
+import SharedElementExample from "./src/examples/SharedElementExample";
+import SharedElementExampleDetails from "./src/examples/SharedElementExampleDetails";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -261,6 +263,14 @@ export default function App() {
         <Stack.Screen
           name="Shared Element Transition"
           component={SharedElementTransition}
+        />
+        <Stack.Screen
+          name="Shared Element Example"
+          component={SharedElementExample}
+        />
+        <Stack.Screen
+          name="Shared Element Example Details"
+          component={SharedElementExampleDetails}
         />
       </Stack.Navigator>
     </NavigationContainer>

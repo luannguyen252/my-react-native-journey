@@ -39,6 +39,12 @@ export default class FirstScreen extends PureComponent {
               this.props.navigation.navigate("Shared Element Transition")
             }
           />
+          <Button
+            title="Shared Element Example"
+            onPress={() =>
+              this.props.navigation.navigate("Shared Element Example")
+            }
+          />
         </SafeAreaView>
       </View>
     );
