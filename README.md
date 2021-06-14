@@ -290,3 +290,13 @@ function GoToButton({ screenName }) {
 - [NavigationActions Reference](https://reactnavigation.org/docs/1.x/navigation-actions)
 - [StackNavigator Reference](https://reactnavigation.org/docs/1.x/stack-navigator#screen-navigation-options)
 - [TabNavigator Reference](https://reactnavigation.org/docs/1.x/tab-navigator)
+
+[Expo project error Could not connect to development server after updating expo SDK](https://stackoverflow.com/questions/58458091/expo-project-error-could-not-connect-to-development-server-after-updating-expo-s)
+
+1. Run `npm install -g expo-cli` to install the latest Expo CLI globally.
+2. Close your Expo CLI server if you are using it.
+3. Make sure in `app.json` the `sdkVersion` is `33.0.0`
+4. Change the `react` dependency in your package.json from `16.5.0` to `16.8.3`
+5. Delete your project `node_modules` directory and `package-lock.json` file
+6. Run `npm install` or `yarn install` depending on your package manager.
+7. Run `expo start -c` to clear your cache and start your application.

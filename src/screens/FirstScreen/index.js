@@ -25,6 +25,12 @@ export default class FirstScreen extends PureComponent {
               Examples in First Screen will appear here.
             </Text>
             <Button
+              title="Carousel FlatList Animation"
+              onPress={() =>
+                this.props.navigation.navigate("Carousel FlatList Animation")
+              }
+            />
+            <Button
               title="Go to Details"
               onPress={() => this.props.navigation.navigate("Details")}
             />

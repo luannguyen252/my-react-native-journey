@@ -56,6 +56,8 @@ import ReactNativeLocationTrackingExamples from "././src/screens/SecondScreen/Re
 import ReactNativeModalExamples from "././src/screens/SecondScreen/ReactNativeModalExamples";
 import ReactNativeCircularProgressExample from "././src/screens/SecondScreen/ReactNativeCircularProgressExample";
 import ReactNativeSimpleRadioButton from "././src/screens/SecondScreen/ReactNativeSimpleRadioButton";
+// FlatList
+import CarouselFlatListAnimation from "././src/screens/FlatListScreen/CarouselFlatListAnimation";
 // Tab Bar Icons
 import {
   IconFirst,
@@ -351,6 +353,11 @@ export default function App() {
         <Stack.Screen
           name="React Native Simple Radio Button"
           component={ReactNativeSimpleRadioButton}
+        />
+        {/* FlatList */}
+        <Stack.Screen
+          name="Carousel FlatList Animation"
+          component={CarouselFlatListAnimation}
         />
       </Stack.Navigator>
     </NavigationContainer>
