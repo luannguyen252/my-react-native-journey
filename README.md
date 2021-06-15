@@ -22,6 +22,7 @@
 - [react-native-animate-loading-button](https://github.com/andcosta/react-native-animate-loading-button)
 - [react-native-offline](https://github.com/rgommezz/react-native-offline)
 - [react-native-animated-math](https://github.com/rastapasta/react-native-animated-math)
+- [react-native-modalize](https://github.com/jeremybarbet/react-native-modalize)
 
 ## Tutorials
 
