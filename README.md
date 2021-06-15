@@ -17,12 +17,7 @@
 - [Animate your React Native components](https://github.com/shoutem/animation)
 - [react-native-off-canvas-menu](https://github.com/proshoumma/react-native-off-canvas-menu)
 - [Animated Tab Bar Component for React Native](https://github.com/10clouds/FluidBottomNavigation-rn)
-- [react-native-animated-ellipsis](https://github.com/adorableio/react-native-animated-ellipsis)
-- [react-native-async-image-animated](https://github.com/ZXVentures/react-native-async-image-animated)
-- [react-native-animate-loading-button](https://github.com/andcosta/react-native-animate-loading-button)
 - [react-native-offline](https://github.com/rgommezz/react-native-offline)
-- [react-native-animated-math](https://github.com/rastapasta/react-native-animated-math)
-- [react-native-modalize](https://github.com/jeremybarbet/react-native-modalize)
 
 ## Tutorials
 
