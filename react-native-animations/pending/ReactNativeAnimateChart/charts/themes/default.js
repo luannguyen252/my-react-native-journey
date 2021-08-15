@@ -1,0 +1,29 @@
+export const default = {
+	normal:{
+		stroke:,
+		fill:
+	},
+	active:{
+		stroke:
+		fill:
+	}
+	title:{
+		color:,
+		size:
+	},
+	subtitle:{
+		color:,
+		size:
+	},
+	coords:{
+		color:,
+		width:
+	}
+	backgroundColor:,
+	padding:{
+		left:,
+		top:,
+		bottom:,
+		right:
+	}
+}

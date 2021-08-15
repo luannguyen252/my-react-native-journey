@@ -1,0 +1,327 @@
+import faker from "faker";
+import { MotiView } from "moti";
+import * as Animatable from "react-native-animatable";
+import * as React from "react";
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  Animated,
+} from "react-native";
+import colors from "../../../../assets/styles/colors";
+import data from "./data";
+
+const { width, height } = Dimensions.get("screen");
+const LOGO_WIDTH = 220;
+const LOGO_HEIGHT = 40;
+const DOT_SIZE = 40;
+const TICKER_HEIGHT = 40;
+const CIRCLE_SIZE = width * 0.6;
+const DURATION = 500;
+
+const Circle = ({ scrollX }) => {
+  return (
+    <View style={[StyleSheet.absoluteFillObject, styles.circleContainer]}>
+      {data.map(({ color }, index) => {
+        const inputRange = [
+          (index - 0.55) * width,
+          index * width,
+          (index + 0.55) * width,
+        ];
+
+        const scale = scrollX.interpolate({
+          inputRange,
+          outputRange: [0, 1, 0],
+          extrapolate: "clamp",
+        });
+
+        const opacity = scrollX.interpolate({
+          inputRange,
+          outputRange: [0, 0.2, 0],
+        });
+
+        return (
+          <Animatable.View
+            animation="zoomIn"
+            delay={DURATION + 50}
+            style={styles.circle}
+          >
+            <Animated.View
+              key={index}
+              style={[
+                styles.circle,
+                {
+                  backgroundColor: color,
+                  opacity,
+                  transform: [{ scale }],
+                },
+              ]}
+            />
+          </Animatable.View>
+        );
+      })}
+    </View>
+  );
+};
+
+const Ticker = ({ scrollX }) => {
+  const inputRange = [-width, 0, width];
+  const translateY = scrollX.interpolate({
+    inputRange,
+    outputRange: [TICKER_HEIGHT, 0, -TICKER_HEIGHT],
+  });
+
+  return (
+    <View style={styles.tickerContainer}>
+      <Animatable.View animation="fadeInUp" delay={DURATION + 50}>
+        <Animated.View style={{ transform: [{ translateY }] }}>
+          {data.map(({ type }, index) => {
+            return (
+              <Text key={index} style={styles.tickerText}>
+                {type}
+              </Text>
+            );
+          })}
+        </Animated.View>
+      </Animatable.View>
+    </View>
+  );
+};
+
+const Item = ({ imageUri, heading, description, index, scrollX }) => {
+  const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
+
+  const inputRangeOpacity = [
+    (index - 0.3) * width,
+    index * width,
+    (index + 0.3) * width,
+  ];
+
+  const scale = scrollX.interpolate({
+    inputRange,
+    outputRange: [0, 1, 0],
+  });
+
+  const translateXHeading = scrollX.interpolate({
+    inputRange,
+    outputRange: [width * 0.1, 0, -width * 0.1],
+  });
+
+  const translateXDescription = scrollX.interpolate({
+    inputRange,
+    outputRange: [width * 0.7, 0, -width * 0.7],
+  });
+
+  const opacity = scrollX.interpolate({
+    inputRange: inputRangeOpacity,
+    outputRange: [0, 1, 0],
+  });
+
+  return (
+    <View style={styles.itemStyle}>
+      <Animatable.View
+        animation="fadeInRight"
+        delay={DURATION + 450}
+        style={[styles.imageStyle, { top: 40 }]}
+      >
+        <Animated.Image
+          source={imageUri}
+          style={[
+            styles.imageStyle,
+            {
+              transform: [{ scale }],
+            },
+          ]}
+        />
+      </Animatable.View>
+      <View style={styles.textContainer}>
+        <Animatable.View animation="fadeInUp" delay={DURATION + 350}>
+          <Animated.Text
+            style={[
+              styles.heading,
+              {
+                opacity,
+                transform: [{ translateX: translateXHeading }],
+              },
+            ]}
+          >
+            {heading}
+          </Animated.Text>
+        </Animatable.View>
+        <Animatable.View animation="fadeInUp" delay={DURATION + 650}>
+          <Animated.Text
+            style={[
+              styles.description,
+              {
+                opacity,
+                transform: [
+                  {
+                    translateX: translateXDescription,
+                  },
+                ],
+              },
+            ]}
+          >
+            {description}
+          </Animated.Text>
+        </Animatable.View>
+      </View>
+    </View>
+  );
+};
+
+const Pagination = ({ scrollX }) => {
+  const inputRange = [-width, 0, width];
+  const translateX = scrollX.interpolate({
+    inputRange,
+    outputRange: [-DOT_SIZE, 0, DOT_SIZE],
+  });
+
+  return (
+    <View style={[styles.pagination]}>
+      <Animatable.View animation="bounceIn" delay={DURATION + 2000}>
+        <Animated.View
+          style={[
+            styles.paginationIndicator,
+            {
+              position: "absolute",
+              transform: [{ translateX }],
+            },
+          ]}
+        />
+      </Animatable.View>
+      {data.map((item, index) => {
+        return (
+          <View key={item.key} style={styles.paginationDotContainer}>
+            <Animatable.View
+              animation="bounceIn"
+              delay={DURATION * index}
+              style={[styles.paginationDot, { backgroundColor: item.color }]}
+            />
+          </View>
+        );
+      })}
+    </View>
+  );
+};
+
+export default function SharedElementTransitionReactNavigation() {
+  const scrollX = React.useRef(new Animated.Value(0)).current;
+
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <Circle scrollX={scrollX} />
+      <Animated.FlatList
+        keyExtractor={(item) => item.key}
+        data={data}
+        renderItem={({ item, index }) => (
+          <Item {...item} index={index} scrollX={scrollX} />
+        )}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        horizontal
+        onScroll={Animated.event(
+          [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+          { useNativeDriver: true }
+        )}
+        scrollEventThrottle={16}
+      />
+      <Pagination scrollX={scrollX} />
+      <Ticker scrollX={scrollX} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
+    alignItems: "center",
+  },
+  itemStyle: {
+    width,
+    height,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  imageStyle: {
+    width: width * 0.85,
+    height: width * 0.85,
+    resizeMode: "contain",
+    flex: 1,
+  },
+  textContainer: {
+    alignItems: "center",
+    alignSelf: "center",
+    flex: 0.6,
+  },
+  heading: {
+    color: colors.coolGray900,
+    textTransform: "uppercase",
+    fontSize: 24,
+    fontWeight: "800",
+    letterSpacing: 2,
+    marginBottom: 8,
+  },
+  description: {
+    color: colors.coolGray400,
+    fontWeight: "500",
+    textAlign: "center",
+    width: width * 0.75,
+    marginLeft: 16,
+    marginRight: 16,
+    fontSize: 16,
+    lineHeight: 16 * 1.5,
+  },
+  pagination: {
+    position: "absolute",
+    bottom: 50,
+    flexDirection: "row",
+    height: DOT_SIZE,
+  },
+  paginationDot: {
+    width: DOT_SIZE * 0.3,
+    height: DOT_SIZE * 0.3,
+    borderRadius: DOT_SIZE * 0.15,
+  },
+  paginationDotContainer: {
+    width: DOT_SIZE,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paginationIndicator: {
+    width: DOT_SIZE,
+    height: DOT_SIZE,
+    borderRadius: DOT_SIZE / 2,
+    borderWidth: 2,
+    borderColor: "#ddd",
+  },
+  tickerContainer: {
+    position: "absolute",
+    top: 40,
+    overflow: "hidden",
+    height: TICKER_HEIGHT,
+  },
+  tickerText: {
+    fontSize: TICKER_HEIGHT,
+    lineHeight: TICKER_HEIGHT,
+    textTransform: "uppercase",
+    fontWeight: "800",
+    textAlign: "center",
+  },
+  circleContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circle: {
+    width: CIRCLE_SIZE,
+    height: CIRCLE_SIZE,
+    borderRadius: CIRCLE_SIZE / 2,
+    position: "absolute",
+    top: "15%",
+  },
+});

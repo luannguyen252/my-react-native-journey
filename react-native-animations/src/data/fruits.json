@@ -1,0 +1,82 @@
+[
+  {
+    "key": "0",
+    "image": "../assets/images/apple.png",
+    "name": "Apple",
+    "txtColor": "#991B1B",
+    "bgColor": "#FEE2E2",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "1",
+    "image": "../assets/images/avocado.png",
+    "name": "Avocado",
+    "txtColor": "#065F46",
+    "bgColor": "#D1FAE5",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "2",
+    "image": "../assets/banana.png",
+    "name": "Banana",
+    "txtColor": "#92400E",
+    "bgColor": "#FEF3C7",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "3",
+    "image": "../assets/blueberry.png",
+    "name": "Blueberry",
+    "txtColor": "#6B21A8",
+    "bgColor": "#F3E8FF",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "4",
+    "image": "../assets/green-lemon.png",
+    "name": "Green Lemon",
+    "txtColor": "#3F6212",
+    "bgColor": "#ECFCCB",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "5",
+    "image": "../assets/guava.png",
+    "name": "Guava",
+    "txtColor": "#065F46",
+    "bgColor": "#D1FAE5",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "6",
+    "image": "../assets/kiwi.png",
+    "name": "Kiwi",
+    "txtColor": "#115E59",
+    "bgColor": "#CCFBF1",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "7",
+    "image": "../assets/mango.png",
+    "name": "Mango",
+    "txtColor": "#92400E",
+    "bgColor": "#FEF3C7",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "8",
+    "image": "../assets/orange.png",
+    "name": "Orange",
+    "txtColor": "#9A3412",
+    "bgColor": "#FFEDD5",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  },
+  {
+    "key": "9",
+    "image": "../assets/strawberry.png",
+    "name": "Strawberry",
+    "txtColor": "#9F1239",
+    "bgColor": "#FFE4E6",
+    "description": "The quick brown fox jumps over the lazy dog is an English-language pangram."
+  }
+]
