@@ -1,1 +1,0 @@
-export { AnimatedEmoji } from './lib';

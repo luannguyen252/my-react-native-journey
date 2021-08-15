@@ -1,4 +1,0 @@
-{
-    "/v1/achievements": "/achievements",
-    "/v1/activities/:id/complete": "/completions/:id"
-  }
