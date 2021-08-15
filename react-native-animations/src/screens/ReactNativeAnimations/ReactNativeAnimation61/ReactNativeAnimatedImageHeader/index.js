@@ -1,6 +1,9 @@
+import * as Animatable from "react-native-animatable";
 import React, { Component } from "react";
 import { View, StyleSheet, StatusBar } from "react-native";
 import ParallaxImageHeader from "./ParallaxImageHeader";
+
+const ANIMATION_DELAY = 300;
 
 export default class ReactNativeAnimatedImageHeader extends Component {
   // Generate random color
@@ -12,9 +15,11 @@ export default class ReactNativeAnimatedImageHeader extends Component {
   _renderScrollViewDummyContent() {
     const data = Array.from({ length: 30 });
     return (
-      <View>
+      <Animatable.View animation="fadeInUp" delay={ANIMATION_DELAY}>
         {data.map((_, i) => (
-          <View
+          <Animatable.View
+            animation="fadeInUp"
+            delay={ANIMATION_DELAY * i}
             key={i}
             style={[
               styles.row,
@@ -22,7 +27,7 @@ export default class ReactNativeAnimatedImageHeader extends Component {
             ]}
           />
         ))}
-      </View>
+      </Animatable.View>
     );
   }
 
@@ -33,7 +38,7 @@ export default class ReactNativeAnimatedImageHeader extends Component {
         <ParallaxImageHeader
           headerHeight={300}
           headerColor={this._generateRandomColor()}
-          imgSrc={require("./headerpicture_2.png")}
+          imgSrc={require("./headerpicture_3.png")}
           title="Hello, Luan Nguyen"
         >
           {this._renderScrollViewDummyContent()}

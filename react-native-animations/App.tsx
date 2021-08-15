@@ -1332,6 +1332,19 @@ export default function App() {
         <Stack.Screen
           name="React Native Animation 60"
           component={ReactNativeAnimation60}
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: null,
+            headerBackTitle: null,
+            headerTitleStyle: {
+              color: "#111827",
+            },
+            headerBackTitleStyle: {
+              color: "#111827",
+            },
+            headerTintColor: "#111827",
+          }}
         />
         <Stack.Screen
           name="React Native Animation 61"

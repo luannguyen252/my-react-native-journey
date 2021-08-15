@@ -1,3 +1,4 @@
+import * as Animatable from "react-native-animatable";
 import React, { Component } from "react";
 import {
   Animated,
@@ -17,16 +18,17 @@ const superheroes = [
   {
     backgroundColor: "#CC1C2A",
     key: "spiderman",
-    header: "spider\nman",
+    header: "Spider\nMan",
     imgSrc: require("./img/spiderman.png"),
     movieImgSrc: [
       require("./img/spider-man-movie-1.jpg"),
       require("./img/spider-man-movie-2.jpg"),
     ],
     style: { height: 300, width: 329 },
-    name: "peter parker",
+    name: "Peter Parker",
     bodyText:
       "In Forest Hills, Queens, New York, Midtown High School student Peter Benjamin Parker is a science-whiz orphan living with his Uncle Ben and Aunt May. He is bitten by a radioactive spider at a science exhibit and acquires the agility and proportionate strength of an arachnid.",
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#DA9403",
@@ -37,10 +39,11 @@ const superheroes = [
       require("./img/iron-man-movie-1.jpg"),
       require("./img/iron-man-movie-2.jpg"),
     ],
-    header: "iron\nman",
-    name: "tony stark",
+    header: "Iron\nMan",
+    name: "Tony Stark",
     bodyText:
       "Anthony Edward Stark is the son of wealthy industrialist and head of Stark Industries, Howard Stark, and Maria Stark. A boy genius, he enters MIT at the age of 15 to study engineering and later receives master's degrees in engineering and physics. After his parents are killed in a car accident, he inherits his father's company.",
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#000000",
@@ -51,10 +54,11 @@ const superheroes = [
       require("./img/black-widow-movie-1.jpg"),
       require("./img/black-widow-movie-2.jpg"),
     ],
-    header: "black\nwidow",
-    name: "natasha romanova",
+    header: "Black\nWidow",
+    name: "Natasha Romanova",
     bodyText:
       'Natasha was born in Stalingrad (now Volgograd), Russia. The first and best-known Black Widow is a Russian agent trained as a spy, martial artist, and sniper, and outfitted with an arsenal of high-tech weaponry, including a pair of wrist-mounted energy weapons dubbed her "Widow\'s Bite".',
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#00579B",
@@ -65,10 +69,11 @@ const superheroes = [
       require("./img/captain-america-movie-1.jpg"),
       require("./img/captain-america-movie-2.jpg"),
     ],
-    header: "captain\namerica",
-    name: "steve rogers",
+    header: "Captain\nAmerica",
+    name: "Steve Rogers",
     bodyText:
       "Steven Rogers was born in the Lower East Side of Manhattan, New York City, in 1920 to poor Irish immigrants, Sarah and Joseph Rogers. Joseph died when Steve was a child, and Sarah died of pneumonia while Steve was a teen. By early 1940, before America's entry into World War II, Rogers is a tall, scrawny fine arts student specializing in illustration and a comic book writer and artist.",
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#660C1D",
@@ -79,10 +84,11 @@ const superheroes = [
       require("./img/scarlet-witch-movie-1.jpg"),
       require("./img/scarlet-witch-movie-2.jpg"),
     ],
-    header: "scarlet\nwitch",
-    name: "wanda maximoff",
+    header: "Scarlet\nWitch",
+    name: "Wanda Maximoff",
     bodyText:
       "Magda, the wife of Magneto, escapes from him while pregnant and takes sanctuary at Mount Wundagore in Transia, the home of the High Evolutionary. She gave birth to twins, Wanda and Pietro. The Elder God Chthon altered Wanda at birth and gave her the ability to use magic in addition to her mutant abilities, planning to use her as a vessel when her powers reached maturity.",
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#333333",
@@ -93,10 +99,11 @@ const superheroes = [
       require("./img/black-panther-movie-1.jpg"),
       require("./img/black-panther-movie-2.jpg"),
     ],
-    header: "black\npanther",
-    name: "king t'challa",
+    header: "Black\nPanther",
+    name: "King T'Challa",
     bodyText:
       "The Black Panther is the ceremonial title given to the chief of the Panther Tribe of the advanced African nation of Wakanda. In addition to ruling the country, he is also chief of its various tribes (collectively referred to as the Wakandas). The Panther habit is a symbol of office (head of state) and is used even during diplomatic missions.",
+    viewMoreText: "#fff",
   },
   {
     backgroundColor: "#908548",
@@ -107,13 +114,15 @@ const superheroes = [
       require("./img/hulk-movie-1.jpeg"),
       require("./img/hulk-movie-2.jpg"),
     ],
-    header: "the\nhulk",
-    name: "bruce banner",
+    header: "The\nHulk",
+    name: "Bruce Banner",
     bodyText:
       "During the experimental detonation of a gamma bomb, scientist Robert Bruce Banner saves teenager Rick Jones who has driven onto the testing field; Banner pushes Jones into a trench to save him, but is hit with the blast, absorbing massive amounts of gamma radiation. He awakens later seemingly unscathed, but that night transforms into a lumbering grey form.",
+    viewMoreText: "#fff",
   },
 ];
 
+const ANIMATION_DELAY = 300;
 const MAX_CARDS_DISPLAYED = 4;
 const ADVANCE_THRESHOLD = 0.2; // % of screen swipe horizontal
 const GESTURE_STATES = [
@@ -204,7 +213,7 @@ export default class AnimationMarvelGesturesModified extends Component {
     );
   }
 
-  onKnowMoreTextPress = () => {
+  onViewMoreTextPress = () => {
     Animated.stagger(1000, [
       Animated.stagger(300, [
         Animated.stagger(
@@ -343,7 +352,11 @@ export default class AnimationMarvelGesturesModified extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <Animatable.View
+        animation="fadeInUp"
+        delay={ANIMATION_DELAY}
+        style={styles.container}
+      >
         {superheroes.map((hero, index) => {
           const isActiveCard = this.state.activeIndex === index;
           return (
@@ -513,19 +526,39 @@ export default class AnimationMarvelGesturesModified extends Component {
                       },
                     ]}
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.8}
-                      onPress={this.onKnowMoreTextPress}
+                    <Animatable.View
+                      animation="fadeInUp"
+                      delay={ANIMATION_DELAY + 150}
                     >
-                      <Text style={styles.knowMoreText}>know more ⟶</Text>
-                    </TouchableOpacity>
+                      <TouchableOpacity
+                        activeOpacity={0.8}
+                        onPress={this.onViewMoreTextPress}
+                        style={{
+                          borderWidth: 1,
+                          borderColor: "#fff",
+                          height: 56,
+                          justifyContent: "center",
+                          alignItems: "center",
+                          marginTop: 32,
+                        }}
+                      >
+                        <Text
+                          style={[
+                            styles.viewMoreText,
+                            { color: hero.viewMoreText },
+                          ]}
+                        >
+                          View More →
+                        </Text>
+                      </TouchableOpacity>
+                    </Animatable.View>
                   </Animated.View>
                 </View>
               </Animated.View>
             </PanGestureHandler>
           );
         })}
-      </View>
+      </Animatable.View>
     );
   }
 }
@@ -565,8 +598,9 @@ const styles = StyleSheet.create({
     width: 50,
   },
   moviesHeaderText: {
-    fontSize: 36,
-    letterSpacing: 1.8,
+    fontSize: 40,
+    lineHeight: 48,
+    fontWeight: "900",
   },
   dummy: {
     width: 50,
@@ -590,19 +624,22 @@ const styles = StyleSheet.create({
   },
   heroHeaderText: {
     color: "#FFFFFF",
-    fontSize: 70,
-    lineHeight: 76,
+    fontSize: 72,
+    lineHeight: 80,
+    fontWeight: "900",
   },
   subHeaderText: {
-    fontSize: 28,
+    fontSize: 32,
+    lineHeight: 40,
+    opacity: 0.8,
   },
   knowMoreContainer: {
     marginTop: 20,
   },
-  knowMoreText: {
-    color: "#FFB23E",
-    fontSize: 22,
-    letterSpacing: 1.8,
+  viewMoreText: {
+    fontSize: 18,
+    lineHeight: 24,
+    fontWeight: "500",
   },
   nameRow: {
     alignItems: "center",
@@ -612,11 +649,12 @@ const styles = StyleSheet.create({
   bodyTextContainer: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: "rgba(0,0,0,0.2)",
+    borderColor: "rgba(0, 0, 0, 0.2)",
     paddingVertical: 15,
     marginBottom: 15,
   },
   bodyText: {
+    color: "#000",
     fontSize: 16,
     lineHeight: 32,
   },
