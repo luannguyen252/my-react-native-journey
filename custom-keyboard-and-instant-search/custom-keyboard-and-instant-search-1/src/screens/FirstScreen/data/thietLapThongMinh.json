@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Xác thực bằng Face ID",
+    "route": "Xác thực bằng Face ID"
+  },
+  {
+    "name": "Lưu phiên đăng nhập",
+    "route": "Lưu phiên đăng nhập"
+  },
+  {
+    "name": "Thanh toán tự động",
+    "route": "Thanh toán tự động"
+  },
+  {
+    "name": "Smart OTP",
+    "route": "Smart OTP"
+  },
+  {
+    "name": "Giao dịch mẫu",
+    "route": "Giao dịch mẫu"
+  },
+  {
+    "name": "Hỗ trợ",
+    "route": "Hỗ trợ"
+  }
+]

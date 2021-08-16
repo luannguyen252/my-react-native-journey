@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Gửi tiết kiệm",
+    "route": "Gửi tiết kiệm"
+  },
+  {
+    "name": "Easy Vay",
+    "route": "Easy Vay"
+  },
+  {
+    "name": "Mua bảo hiểm",
+    "route": "Mua bảo hiểm"
+  },
+  {
+    "name": "Chuyển tiền đến SĐT",
+    "route": "Chuyển tiền đến SĐT"
+  },
+  {
+    "name": "Chuyển tiền đến STK",
+    "route": "Chuyển tiền đến STK"
+  },
+  {
+    "name": "Chuyển tiền đến số thẻ",
+    "route": "Chuyển tiền đến số thẻ"
+  }
+]

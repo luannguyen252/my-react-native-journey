@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Chuyển tiền đến SĐT",
+    "route": "Chuyển tiền đến SĐT"
+  },
+  {
+    "name": "Tiền điện",
+    "route": "Tiền điện"
+  },
+  {
+    "name": "Tiền nước",
+    "route": "Tiền nước"
+  },
+  {
+    "name": "Nạp điện thoại",
+    "route": "Nạp điện thoại"
+  },
+  {
+    "name": "Mua DATA",
+    "route": "Mua DATA"
+  },
+  {
+    "name": "Vé xem phim",
+    "route": "Vé xem phim"
+  }
+]

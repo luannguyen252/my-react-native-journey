@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tất cả",
+    "amount": 100,
+    "isActive": true
+  },
+  {
+    "name": "Dịch vụ",
+    "amount": 25,
+    "isActive": false
+  },
+  {
+    "name": "Danh bạ",
+    "amount": 10,
+    "isActive": false
+  },
+  {
+    "name": "Thiết lập",
+    "amount": 25,
+    "isActive": false
+  },
+  {
+    "name": "Trò chuyện",
+    "amount": 10,
+    "isActive": false
+  },
+  {
+    "name": "Giao dịch mẫu",
+    "amount": 30,
+    "isActive": false
+  }
+]
