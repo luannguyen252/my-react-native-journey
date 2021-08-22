@@ -22,7 +22,7 @@ import styles from "./styles";
 const { width, height } = Dimensions.get("screen");
 const DURATION = 500;
 
-import LottieTestView from "./LottieTestView";
+import AnimationCircularProgressModified from "./AnimationCircularProgressModified";
 
 export default function ReactNativeAnimation69() {
   return (
@@ -32,10 +32,14 @@ export default function ReactNativeAnimation69() {
     //     showsVerticalScrollIndicator={false}
     //   >
     //     <SafeAreaView>
-    //       <Text style={globalStyles.title}>React Native Animation 69</Text>
+    //       <Text style={globalStyles.title}>React Native Animation 62</Text>
     //     </SafeAreaView>
     //   </ScrollView>
     // </View>
-    <LottieTestView />
+    <View
+      style={{ flex: 1, backgroundColor: "white", justifyContent: "center" }}
+    >
+      <AnimationCircularProgressModified />
+    </View>
   );
 }

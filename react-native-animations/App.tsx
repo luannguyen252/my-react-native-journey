@@ -1366,6 +1366,19 @@ export default function App() {
         <Stack.Screen
           name="React Native Animation 62"
           component={ReactNativeAnimation62}
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: null,
+            headerBackTitle: null,
+            headerTitleStyle: {
+              color: "#111827",
+            },
+            headerBackTitleStyle: {
+              color: "#111827",
+            },
+            headerTintColor: "#111827",
+          }}
         />
         <Stack.Screen
           name="React Native Animation 63"
@@ -1430,6 +1443,19 @@ export default function App() {
         <Stack.Screen
           name="React Native Animation 78"
           component={ReactNativeAnimation78}
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTitle: null,
+            headerBackTitle: null,
+            headerTitleStyle: {
+              color: "#FFFFFF",
+            },
+            headerBackTitleStyle: {
+              color: "#FFFFFF",
+            },
+            headerTintColor: "#FFFFFF",
+          }}
         />
         <Stack.Screen
           name="React Native Animation 79"

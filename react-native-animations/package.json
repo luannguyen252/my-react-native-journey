@@ -27,6 +27,7 @@
     "d3-interpolate-path": "^2.2.3",
     "d3-scale": "^4.0.0",
     "d3-shape": "^3.0.1",
+    "debounce": "^1.2.1",
     "expo": "~41.0.1",
     "expo-app-loading": "^1.1.2",
     "expo-av": "~9.1.2",
